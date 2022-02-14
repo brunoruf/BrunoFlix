@@ -1,0 +1,152 @@
+body {
+  background: #000;
+}
+
+.main-background {
+  background-image: url(../_assets/featured/bg7.jpg);
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -30;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 1) 180%
+  );
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 1rem;
+  height: 6rem;
+  font-weight: 500;
+}
+
+.menu-active {
+  font-weight: 700;
+  color: var(--white) !important;
+}
+
+.menu ul {
+  margin-left: 4rem;
+  display: flex;
+}
+
+.menu li {
+  padding-left: 4rem;
+  list-style-type: none;
+  color: var(--grey);
+  transition: 0.3s;
+}
+
+.menu li:hover {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.menu li:nth-child(1) {
+  padding-left: 0;
+}
+
+.featured-info {
+  width: 30vw;
+  color: var(--white);
+  width: 40vw;
+  margin: 24vh 0 0 4rem;
+  text-shadow: 2px 3px 18px rgba(0, 0, 0, 0.32);
+}
+
+.featured-info-details {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.featured-info-details p {
+  padding-right: 2rem;
+  font-size: 1rem;
+}
+
+.featured-info-details p:nth-child(1) {
+  color: var(--white);
+}
+
+.featured-info-details p:nth-child(2) {
+  color: var(--green);
+}
+
+.featured-info-details p:nth-child(3) {
+  color: var(--white);
+}
+
+.features-info-actions {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.features-info-actions img {
+  margin-left: 2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.features-info-actions img:hover {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.features-info-actions-plus {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-list {
+  margin: 8rem 0 2rem 4rem;
+  color: var(--white);
+}
+
+.my-list h3 {
+  margin: 0 0 1rem 0;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-covers {
+  display: flex;
+}
+
+.swiper-covers > div {
+  margin-right: 1rem;
+}
+
+.swiper img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
