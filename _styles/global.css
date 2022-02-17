@@ -60,7 +60,7 @@ a {
 }
 
 .btn-primary-medium:hover {
-  background: var(--green) 100%;
+  filter: brightness(120%);
 }
 
 .btn-primary-s {

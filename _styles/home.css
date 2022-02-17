@@ -5,11 +5,12 @@ body {
 .main-background {
   background-image: url(../_assets/featured/bg7.jpg);
   background-repeat: no-repeat;
-  position: absolute;
-  z-index: -30;
   background-size: cover;
+  width: 100vw;
   height: 100vh;
-  width: 100%;
+  top: 0;
+  z-index: -100;
+  position: fixed;
 }
 
 .container {
@@ -18,6 +19,7 @@ body {
 
 header {
   position: fixed;
+  z-index: 10;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -53,7 +55,7 @@ header {
 .menu li {
   padding-left: 4rem;
   list-style-type: none;
-  color: var(--grey);
+  color: var(--grey-light);
   transition: 0.3s;
 }
 
@@ -90,6 +92,7 @@ header {
 
 .featured-info-details p:nth-child(2) {
   color: var(--green);
+  font-weight: 600;
 }
 
 .featured-info-details p:nth-child(3) {
@@ -122,34 +125,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.my-list {
-  margin: 8rem 0 2rem 4rem;
-  color: var(--white);
-}
-
-.my-list h3 {
-  margin: 0 0 1rem 0;
-}
-
-.swiper {
-  width: 100%;
-}
-
-.swiper-covers {
-  display: flex;
-}
-
-.swiper-covers > div {
-  margin-right: 1rem;
-}
-
-.swiper img {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0.3rem;
 }
 
 .features-info-actions-plus-box {
@@ -189,4 +164,33 @@ header {
   padding: 0.4rem 0;
   border-bottom: 0;
   font-size: 1rem;
+}
+
+.titles-wrap {
+  margin: 4rem 0 0 4rem;
+}
+
+.titles-wrap h3 {
+  color: var(--white);
+  margin-bottom: 1.6rem;
+}
+
+.titles-wrap-list {
+  display: flex;
+  height: 20rem;
+}
+
+.titles-wrap-list div {
+  margin-right: 1.2rem;
+}
+
+.titles-wrap-list img {
+  width: 200px;
+  border-radius: 0.4rem;
+  transition: 0.2s ease-in-out;
+  filter: brightness(80%);
+}
+
+.titles-wrap-list img:hover {
+  filter: brightness(100%);
 }
