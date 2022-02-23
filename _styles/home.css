@@ -178,9 +178,16 @@ header {
 .titles-wrap-list {
   display: flex;
   height: 20rem;
+  position: relative;
+  right: 0;
+  transition: 1s ease-in-out;
 }
 
-.titles-wrap-list div {
+.titles-list-movie {
+  margin-right: 1.2rem;
+}
+
+.titles-list-movie.active {
   margin-right: 1.2rem;
 }
 

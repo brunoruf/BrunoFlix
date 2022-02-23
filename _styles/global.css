@@ -168,3 +168,23 @@ a {
 .profile-box-menu a:last-child {
   margin-bottom: 1rem;
 }
+
+.titles-wrap-container {
+  position: relative;
+}
+
+.titles-list-movies-swiperight {
+  height: 100%;
+  background: var(--black);
+  position: absolute;
+  top: -1rem;
+  right: 0;
+}
+
+.titles-list-movies-swipeleft {
+  height: 100%;
+  background: var(--black);
+  position: absolute;
+  top: -1rem;
+  left: -4rem;
+}

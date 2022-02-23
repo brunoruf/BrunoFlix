@@ -62,3 +62,19 @@ window.onscroll = ()=> {
     }
 }
 
+// Rolar lista filmes
+
+const swipeRight = document.querySelector('.titles-list-movies-swiperight')
+const swipeLeft = document.querySelector('.titles-list-movies-swipeleft')
+swipeRight.addEventListener("click", rollRight)
+swipeLeft.addEventListener("click", rollLeft)
+
+function rollRight () {
+    const swipeListRight = document.querySelector(".titles-wrap-list")
+    swipeListRight.style.right = "50%"
+}
+
+function rollLeft () {
+    const swipeListLeft = document.querySelector(".titles-wrap-list")
+    swipeListLeft.style.left = "50%"
+}
