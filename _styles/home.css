@@ -74,6 +74,7 @@ header {
   width: 40vw;
   margin: 24vh 0 0 4rem;
   text-shadow: 2px 3px 18px rgba(0, 0, 0, 0.32);
+  transition: 0.3s ease-in-out;
 }
 
 .featured-info-details {

@@ -14,9 +14,10 @@
 body {
   overflow-x: hidden;
   font-family: "Kanit", sans-serif;
-  --black: #0d114f;
+  --black: #1b1a1b;
   --white: #fff;
   --primary-color: #9d00ff;
+  --primary-color-dark: #25003b;
   --green: #10d6ab;
   --grey-light: #d4d4d4;
   --grey: #808080;
@@ -171,20 +172,57 @@ a {
 
 .titles-wrap-container {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .titles-list-movies-swiperight {
-  height: 100%;
-  background: var(--black);
+  opacity: 0.8;
+  width: 2vw;
+  height: 290.483px;
+  background: rgba(255, 255, 255, 0.8);
   position: absolute;
-  top: -1rem;
-  right: 0;
+  top: 0;
+  right: -1px;
+  border: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.4rem 0 0 0.4rem;
+  transition: -0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.titles-list-movies-swipeleft {
-  height: 100%;
-  background: var(--black);
+.titles-list-movies-swipeleft.active {
+  overflow: visible;
+  opacity: 0.8;
+  width: 2%;
+  height: 290.483px;
+  background: rgba(255, 255, 255, 0.5);
   position: absolute;
-  top: -1rem;
-  left: -4rem;
+  top: 0;
+  left: -4.1rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 0.4rem 0.4rem 0;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.titles-list-movies-swipeleft.active svg {
+  transform: rotate(180deg);
+}
+
+.titles-list-movies-swiperight:hover {
+  opacity: 0.8;
+  background: var(--primary-color);
+  transition: 0.3s ease-in-out;
+}
+
+.titles-list-movies-swipeleft.active:hover {
+  opacity: 0.8;
+  background: var(--primary-color);
+  transition: 0.3s ease-in-out;
 }

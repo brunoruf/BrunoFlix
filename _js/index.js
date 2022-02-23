@@ -45,36 +45,55 @@ function closePlusActions() {
 
 const header = document.querySelector("header")
 const darkBackground = document.querySelector(".main-background")
+const FeaturedInfo = document.querySelector(".featured-info")
 window.onscroll = ()=> {
     
-    if(document.documentElement.scrollTop > 160){
+    if(document.documentElement.scrollTop > 300){
         header.style.visibility = "hidden"
         header.style.opacity = "0"
         header.style.transition = ".6s"
         darkBackground.style.opacity = "0.4"
         darkBackground.style.transition= ".6s"
         darkBackground.style.filter= "blur(1rem)"
+        FeaturedInfo.style.opacity= "0.3"
     } else {
         header.style.visibility = "visible"
         header.style.opacity = "1"
         darkBackground.style.opacity = "1"
         darkBackground.style.filter= "blur(0)"
+        FeaturedInfo.style.opacity= "1"
     }
 }
 
-// Rolar lista filmes
 
-const swipeRight = document.querySelector('.titles-list-movies-swiperight')
-const swipeLeft = document.querySelector('.titles-list-movies-swipeleft')
+// Carrossel My List
+
+let moviesListPosition = 0
+const swipeList = document.querySelector(".titles-wrap-list")
+const swipeRight = document.querySelector(".titles-list-movies-swiperight")
+const swipeLeft = document.querySelector(".titles-list-movies-swipeleft")
 swipeRight.addEventListener("click", rollRight)
 swipeLeft.addEventListener("click", rollLeft)
 
-function rollRight () {
-    const swipeListRight = document.querySelector(".titles-wrap-list")
-    swipeListRight.style.right = "50%"
+function rollRight() {
+    if(moviesListPosition == 100) {
+        return;
+    }
+    moviesListPosition += 25
+    swipeList.style.right = `${moviesListPosition}%`
+    document.querySelector('.titles-list-movies-swipeleft').classList.add('active')
+
 }
 
-function rollLeft () {
-    const swipeListLeft = document.querySelector(".titles-wrap-list")
-    swipeListLeft.style.left = "50%"
+function rollLeft() {
+    if (moviesListPosition == 0)  {
+        return;
+    } 
+    moviesListPosition -= 25
+    swipeList.style.right = `${moviesListPosition}%`
+    if (moviesListPosition == 0)  {
+        document.querySelector('.titles-list-movies-swipeleft').classList.remove('active')
+        
+    } 
 }
+    
